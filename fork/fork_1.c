@@ -32,3 +32,24 @@ int main(int argc, const char* argv[])
 
     return 0;
 }
+
+/*
+ child process , pid = 25474,  ppid = 25473
+counter = 500, &counter = 0x60104c
+
+ parent process, pid = 25473, ppid = 22642, &counter = 0x60104c
+counter = 300, &counter = 0x60104c
+
+ child process , pid = 25475,  ppid = 25473
+counter = 500, &counter = 0x60104c
+
+ child process , pid = 25476,  ppid = 25473
+counter = 500, &counter = 0x60104c
+
+ child process , pid = 25477,  ppid = 25473
+counter = 500, &counter = 0x60104c
+
+ child process , pid = 25478,  ppid = 25473
+counter = 500, &counter = 0x60104c
+
+*/
