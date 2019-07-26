@@ -15,8 +15,8 @@ int main(int argc, const char* argv[]) {
     int len = lseek(fd, 0, SEEK_END);
 
     // 通信测试
-    //void *ptr = mmap(NULL, len, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);    // MAP_PRIVATE, 父子进程不可通信
-    void *ptr = mmap(NULL, len, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);   // MAP_SHARED, 父子进程可通信
+    void *ptr = mmap(NULL, len, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);    // MAP_PRIVATE, 父子进程不可通信
+    //void *ptr = mmap(NULL, len, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);   // MAP_SHARED, 父子进程可通信
     if (ptr == MAP_FAILED) {
         perror("error");
         exit(1);

@@ -38,6 +38,8 @@ int main(int argc, char *argv[])
     if (pid > 0) {      /* in parent */
 
         pid_t cpid;
+	sleep(5);
+	kill(-getpid(), 9);
         while ((cpid = wait(NULL)) > 0)
             printf("child %d is over\n", cpid);
     }

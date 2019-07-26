@@ -22,6 +22,7 @@ int main(int argc, const char *argv[]) {
     while (1) {
         sleep(1);
         printf("%s\n", (char*)ptr + 1024);
+        //printf("%s\n", (char*)ptr);
     }
 
     // 释放

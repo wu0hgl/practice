@@ -17,7 +17,7 @@ int main(void)
         printf("Group ID of child is %d\n", getpgid(0));
         printf("Session ID of child is %d\n", getsid(0));
 
-        sleep(10);
+        sleep(1);
         setsid();       //子进程非组长进程，故其成为新会话首进程，且成为组长进程。该进程组id即为会话进程
 
         printf("Changed:\n");
@@ -26,7 +26,7 @@ int main(void)
         printf("Group ID of child is %d\n", getpgid(0));
         printf("Session ID of child is %d\n", getsid(0));
 
-        sleep(20);
+        sleep(2);
 
         exit(0);
     }
